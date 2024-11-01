@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:  "Montserrat", sans-serif;;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+
+.main{
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 100px;
+}
+
+.content1{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.content1 h1, h2, p{
+  text-align: left; 
+}
+
+.titulo h1{
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.content1-sub h2{
+  color: #151F9C;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+
+}
+
+.content1-text{
+  font-size: 16px;
+  color: #6F6F6F;
+}
+
+.contenedorImg{
+  width: 70%;
+}
+
+/* contenedor carrousel */
+#carousel {
+
+  position: relative;
+}
+
+/* contenido carrrousel */
+
+
+#slide-container {
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  
+  padding: 10px;
+  gap: 20px;
+
+  color: #000;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+
+  transition: transform 0.5s ease-in-out; /* Transición suave */
+  will-change: transform;
+  
+}
+
+
+
+.slide {
+  scroll-snap-align: left;
+}
+
+.slide img{
+  width: 270px;
+}
+.slide h2{
+  text-align: center;
+  font-size: 16px;
+}
+.slide p{
+  color: #6F6F6F;
+  text-align: center;
+}
+
+.contenedor_flechas {
+  display: flex;
+  justify-content: flex-end; /* Alinea los botones hacia la derecha */
+  gap: 10px; /* Espacio entre los botones */
+  padding-right: 20px; /* Ajusta el espaciado si es necesario */
+}
+
+/* flechas */
+.arrow {
+  background-color: #FBDF00;
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 20px;
+  margin-right: 20px;
+  
+}
+
+.arrow:hover {
+  background-color: black;
+  transition: all 0.5s;
+  color: white;
+}
+
+
+/* responsive design */
+@media screen and (max-width: 768px) {
+  .slide {
+    padding: 15px;
+    min-width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .main {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .content1 {
+    gap: 20px;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .contenedorImg {
+    width: 100%;
+   
+  }
+
+  .slide {
+    min-width: 100%;
+   
+  }
+
+
+}
